@@ -17,3 +17,16 @@ const users = await getUsers();
 console.log(users);
 }
 init();
+
+
+// POST
+
+fetch("http://localhost:3000/users",{method: 'POST',
+headers:'',
+body:
+
+})
+.then((response) => response.json())
+.then((users) => {
+    console.log(users);
+})
