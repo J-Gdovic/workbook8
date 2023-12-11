@@ -1,0 +1,13 @@
+###GET all
+GET http://localhost:3000/users
+
+###GET
+GET http://localhost:3000/users/7
+
+###POST
+##Inserst/creates new user
+POST http://localhost:3000/users/23
+Content-Type: application/json
+
+###new user info body
+
