@@ -1,0 +1,21 @@
+
+
+
+
+label{
+    display: flex;
+    margin-left: 5rem;
+    margin-top: 3rem;
+    }
+    
+    input{
+        display: flex;
+        margin-left: 5rem;
+        margin-top: 1rem;
+    }
+    
+    #addToDoButton{
+        display: flex;
+        margin-left: 5rem;
+        margin-top: 2rem;
+    };
