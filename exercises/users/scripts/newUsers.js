@@ -30,9 +30,11 @@ function addNewUser() {
   })
     .then((response) => response.json())
     .then((addedUser) => {
+      (window.location.href = "users.html")
       // console.log(addedUser);
       return addedUser;
     });
+   
 }
 
 //wire up
