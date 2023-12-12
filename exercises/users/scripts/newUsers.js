@@ -17,6 +17,7 @@ function addNewUser() {
     name: `${newNameFeild}`,
     email: `${newEmailFeild}`,
     username: `${newUserNameFeild}`,
+    //had to add new object to get it listed in table
     address: {
       street: `${newStreetFeild}`,
       city: `${newCityFeild}`,
