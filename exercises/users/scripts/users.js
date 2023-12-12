@@ -31,6 +31,6 @@ function buildDataTable(users) {
     let td6 = tr.insertCell();
     td6.innerText = user.address.city;
   }
-};
+}
 
 window.onload = loadUserDataTable;

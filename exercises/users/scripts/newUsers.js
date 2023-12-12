@@ -6,27 +6,22 @@ let cityFeild = document.querySelector("#cityFeild");
 
 let inputFeildButton = document.querySelector("#inputFeildButton");
 
-
-
-
-
 function addNewUser() {
-    let newNameFeild = nameFeild.value;
-    let newEmailFeild = emailFeild.value;
-    let newUserNameFeild = userNameFeild.value;
-    let newStreetFeild = streetFeild.value;
-    let newCityFeild = cityFeild.value;
+  let newNameFeild = nameFeild.value;
+  let newEmailFeild = emailFeild.value;
+  let newUserNameFeild = userNameFeild.value;
+  let newStreetFeild = streetFeild.value;
+  let newCityFeild = cityFeild.value;
 
-const addedUser = {
-  name: `${newNameFeild}`,
-  email: `${newEmailFeild}`,
-  username: `${newUserNameFeild}`,
-  address:{
-    street: `${newStreetFeild}`,
-    city: `${newCityFeild}`,
-  }
-  
-};
+  const addedUser = {
+    name: `${newNameFeild}`,
+    email: `${newEmailFeild}`,
+    username: `${newUserNameFeild}`,
+    address: {
+      street: `${newStreetFeild}`,
+      city: `${newCityFeild}`,
+    },
+  };
   fetch("http://localhost:3000/users", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
