@@ -18,7 +18,7 @@ fetch("http://localhost:3000/users")
 // }
 // init();
 
-// POST
+// POST New user
 const newUSER = {
   name: "Kanye WEST",
   username: "YEEZYYE",
