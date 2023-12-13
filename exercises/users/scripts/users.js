@@ -30,6 +30,20 @@ function buildDataTable(users) {
 
     let td6 = tr.insertCell();
     td6.innerText = user.address.city;
+
+    let td7 = tr.insertCell();
+    let anchor1 = document.createElement("a");
+    anchor1.innerText = "Edit";
+    anchor1.href = "edit.html";
+    td7.appendChild(anchor1);
+
+    let td8 = tr.insertCell();
+    let anchor2 = document.createElement("a");
+    anchor2.innerText = "Delete";
+    anchor2.href = "delete.html";
+    td8.appendChild(anchor2);
+
+
   }
 }
 
