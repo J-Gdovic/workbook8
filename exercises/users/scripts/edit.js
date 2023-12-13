@@ -11,7 +11,7 @@ let urlParams = new URLSearchParams(location.search);
 
 function editUserData() {
   let id = -1;
-  if (urlParams.has("id") === true) {
+  if (urlParams.has("id")) {
     id = urlParams.get("id");
     fetch(`http://localhost:3000/users/${id}`)
       .then((response) => response.json())
