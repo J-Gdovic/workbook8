@@ -34,13 +34,13 @@ function buildDataTable(users) {
     let td7 = tr.insertCell();
     let anchor1 = document.createElement("a");
     anchor1.innerText = "Edit";
-    anchor1.href = "edit.html";
+    anchor1.href = `edit.html?id=${user.id}`;
     td7.appendChild(anchor1);
 
     let td8 = tr.insertCell();
     let anchor2 = document.createElement("a");
     anchor2.innerText = "Delete";
-    anchor2.href = "delete.html";
+    anchor2.href = `delete.html?id=${user.id}`;
     td8.appendChild(anchor2);
 
 

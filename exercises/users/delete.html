@@ -13,7 +13,22 @@
   </head>
   <body>
     <main>
-
+      <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Are you sure you want to Delete?</h5>
+            </div>
+            <div class="modal-body">
+              <p id="userNameModalParagraph"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="confirmCancel">Cancel</button>
+              <button type="button" class="btn btn-primary" id="confirmDeleteUser">Yes</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <script src="scripts/delete.js"></script>
   </body>
