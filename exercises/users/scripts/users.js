@@ -42,8 +42,6 @@ function buildDataTable(users) {
     anchor2.innerText = "Delete";
     anchor2.href = `delete.html?id=${user.id}`;
     td8.appendChild(anchor2);
-
-
   }
 }
 
