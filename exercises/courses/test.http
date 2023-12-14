@@ -1,0 +1,15 @@
+### GET
+GET http://localhost:3000/courses/17
+
+### INSERT
+PUT http://localhost:3000/courses/17
+Content-Type:  application/json
+
+{
+"dept": "CompSci",
+"courseNum": "203",
+"courseName": "Basket Weaving",
+"instructor": "Grant",
+"startDate": "Aug 12",
+"numDays": "3"
+}
