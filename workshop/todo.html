@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todos</title>
-</head>
-<body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="todo.html">Todo</a>
+      <a href="new_todo.html">Add Todo</a>
+    </nav>
+  </head>
+  <body>
     <main>
-
+      <h1>Stay Organized!</h1>
+      <h3>In this app you will be able to create a todo list!</h3>
+      <form>
+        <label for="userIdSelect">Search By Userid:</label>
+        <select id="userIdSelect">
+          <option value="id">Select...</option>
+        </select>
+      </form>
+      <table>
+        <thead>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Deadline</th>
+            <th>Priority</th>
+        </thead>
+        <tbody id="todoTbody"></tbody>
+      </table>
     </main>
-    <script>
-        
-    </script>
-</body>
+    <script src="stayOrganized/scripts/todo.js"></script>
+  </body>
 </html>
