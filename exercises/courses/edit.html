@@ -99,9 +99,10 @@
             "Content-Type": "application/json",
           },
           body: JSON.stringify(course),
-        }).then(function (response) {
-          window.location.href = "list.html";
-        });
+        }).then((response)=>response.json())
+        .then((course)=>{
+            window.location.href = "list.html"
+        })
       }
 
       saveButton.onclick = saveCourse;
