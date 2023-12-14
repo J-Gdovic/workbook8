@@ -93,7 +93,7 @@
 
       function saveCourse() {
         const course = formToCourse();
-        fetch(`http://localhost:3000/courses/${courseId}`, {
+        fetch(`http://localhost:3000/courses/${course.id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
