@@ -13,6 +13,7 @@
       </nav>
     </header>
     <main>
+      <div id="messageDiv"></div>
       <div class="link-bar">
         <a class="" href="add.html">Add Course</a>
       </div>
@@ -35,7 +36,7 @@
     <script>
       //html elements
       const coursesTableBody = document.querySelector("#coursesTableBody");
-
+      const messageDiv = document.querySelector("#messageDiv");
       //functions
       function loadCourses() {
         fetch("http://localhost:3000/courses")
@@ -74,8 +75,6 @@
         let td6 = row.insertCell();
         td6.innerText = course.numDays;
 
-     
-
         let td8 = row.insertCell();
         let a1 = document.createElement("a");
         a1.innerText = "edit";
@@ -91,6 +90,15 @@
 
       //wire-up
       window.onload = function initialize() {
+        let message = sessionStorage.getItem("message");
+        if (message) {
+          messageDiv.innerText = message;
+        }
+        setTimeout(function () {
+          messageDiv.innerText = "";
+          sessionStorage.removeItem("message");
+        }, 4000);
+        
         loadCourses();
       };
     </script>

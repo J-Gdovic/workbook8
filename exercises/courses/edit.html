@@ -101,6 +101,7 @@
           body: JSON.stringify(course),
         }).then((response)=>response.json())
         .then((course)=>{
+          sessionStorage.setItem("message","successfully saved!")
             window.location.href = "list.html"
         })
       }
