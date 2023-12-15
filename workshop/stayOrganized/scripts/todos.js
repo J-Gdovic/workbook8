@@ -2,28 +2,26 @@
 //variables
 let userIdSelect = document.querySelector("#userIdSelect");
 let todoTbody = document.querySelector("#todoTbody");
-let todoArray;
-//Put userid in drop down!, fetch todoArray
+
+//Put userin drop down!, fetch userArray
 function loadTodoArray() {
-  fetch("http://localhost:8083/api/todos")
+  fetch("http://localhost:8083/api/users")
     .then((response) => response.json())
-    .then((todos) => {
-      todoArray = todos; //assigns the fectch to the golbal var
-      for (const user of todoArray) {
+    .then((users) => {
+      for (const user of users) {
         let option = document.createElement("option");
         option.value = user.id;
-        option.innerText = user.userid;
+        option.innerText = user.name;
         userIdSelect.appendChild(option);
       }
     });
 }
-loadTodoArray();
 
 function buildTodoTable() {
   todoTbody.innerText = "";
-  const selectedUserId = userIdSelect.value;
-  for (const user of todoArray) {
-    if (user.userid == selectedUserId) {
+  let selectedUserId = userIdSelect.value;
+  for (const user of users) {
+    if (user.id == selectedUserId) {
       const tr = todoTbody.insertRow(-1);
 
       let td1 = tr.insertCell(0);
@@ -40,5 +38,5 @@ function buildTodoTable() {
     }
   }
 }
-
+loadTodoArray();
 userIdSelect.onclick = buildTodoTable;
