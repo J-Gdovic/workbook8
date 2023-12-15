@@ -30,7 +30,7 @@ function loadCategoriesArray() {
     .then((categories) => {
       for (const category of categories) {
         let option = document.createElement("option");
-        option.value = category.id;
+        option.value = category.name;
         option.innerText = category.name;
         categorySelect.appendChild(option);
       }
@@ -45,10 +45,12 @@ function addNewTodo() {
   let newTaskInput2 = newTaskInput.value;
 
   let newTodo = {
-    name: `${userIdSelect2}`,
-    category: `${categorySelect2}`,
-    priority: `${prioritySelect2}`,
-    description: `${newTaskInput2}`,
+    userid: userIdSelect2,
+    category: categorySelect2,
+    priority: prioritySelect2,
+    description: newTaskInput2,
+    completed:false,
+    deadline:"02/30/2023"
   };
 
   fetch("http://localhost:8083/api/todos", {
@@ -58,7 +60,7 @@ function addNewTodo() {
   })
     .then((response) => response.json())
     .then((newTodo) => {
-      window.location.href = "todos.html";
+      //   window.location.href = "todos.html";
       // console.log(addTodo);
       return newTodo;
     });
