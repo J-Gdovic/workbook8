@@ -2,7 +2,6 @@
 //variables
 //selects
 let userIdSelect = document.querySelector("#userIdSelect");
-let todoTbody = document.querySelector("#todoTbody");
 let categorySelect = document.querySelector("#categorySelect");
 let prioritySelect = document.querySelector("#prioritySelect");
 //input
@@ -38,6 +37,26 @@ function loadCategoriesArray() {
     });
 }
 
+//add new todo!-connect to submitbutton and redirect back to todo.html
+function addTodo() {
+  let userIdSelect = userIdSelect.value;
+  let categorySelect = categorySelect.value;
+  let prioritySelect = prioritySelect.value;
+  let newTaskInput = newTaskInput.value;
+  fetch("http://localhost:3000/users", {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(addTodo),
+  })
+    .then((response) => response.json())
+    .then((addTodo) => {
+      window.location.href = "todo.html";
+      // console.log(addTodo);
+      return addTodo;
+    });
+}
+
 //wire up
 loadUserArray();
 loadCategoriesArray();
+newTaskSumbitButton.onclick = addTodo;

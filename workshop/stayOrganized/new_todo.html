@@ -18,7 +18,7 @@
       <h3>On this page you will be able to create a new task!</h3>
       <form>
         <div id="userDiv">
-          <label for="userIdSelect">Search By User:</label>
+          <label for="userIdSelect">User:</label>
           <select id="userIdSelect">
             <option value="id">Select...</option>
           </select>
@@ -29,20 +29,24 @@
             <option value="id">Select...</option>
           </select>
         </div>
+        <div id="newTaskDiv">
+          <label>New Task:</label>
+          <input type="text" id="newTaskInput" />
+        </div>
+        <div id="datePicker"></div>
         <div id="priorityDiv">
           <label for="prioritySelect">Priority:</label>
           <select id="prioritySelect">
             <option value="id">Select...</option>
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
           </select>
         </div>
-        <div id="newTaskDiv">
-            <label>New Task:</label>
-            <input type="text" id="newTaskInput">
-        </div>
+
         <div id="buttonDiv">
-<button id="newTaskSumbitButton">Submit</button>
+          <button id="newTaskSumbitButton">Submit</button>
         </div>
-       
       </form>
     </main>
     <script src="scripts/new_todo.js"></script>

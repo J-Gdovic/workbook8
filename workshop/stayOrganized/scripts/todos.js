@@ -21,7 +21,7 @@ function buildTodoTable() {
   fetch("http://localhost:8083/api/todos")
     .then((response) => response.json())
     .then((todos) => {
-      todoTbody.innerText = "";
+      todoTbody.innerHTML = "";
       let selectedUserId = userIdSelect.value;
       for (const todo of todos) {
         if (selectedUserId == todo.userid) {
