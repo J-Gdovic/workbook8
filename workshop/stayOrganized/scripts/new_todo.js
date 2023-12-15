@@ -60,7 +60,7 @@ function addNewTodo() {
   })
     .then((response) => response.json())
     .then((newTodo) => {
-      //   window.location.href = "todos.html";
+        window.location.href = "todos.html";
       // console.log(addTodo);
       return newTodo;
     });
