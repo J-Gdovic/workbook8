@@ -38,25 +38,33 @@ function loadCategoriesArray() {
 }
 
 //add new todo!-connect to submitbutton and redirect back to todo.html
-function addTodo() {
-  let userIdSelect = userIdSelect.value;
-  let categorySelect = categorySelect.value;
-  let prioritySelect = prioritySelect.value;
-  let newTaskInput = newTaskInput.value;
-  fetch("http://localhost:3000/users", {
+function addNewTodo() {
+  let userIdSelect2 = userIdSelect.value;
+  let categorySelect2 = categorySelect.value;
+  let prioritySelect2 = prioritySelect.value;
+  let newTaskInput2 = newTaskInput.value;
+
+  let newTodo = {
+    name: `${userIdSelect2}`,
+    category: `${categorySelect2}`,
+    priority: `${prioritySelect2}`,
+    description: `${newTaskInput2}`,
+  };
+
+  fetch("http://localhost:3000/todos", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(addTodo),
+    body: JSON.stringify(newTodo),
   })
     .then((response) => response.json())
-    .then((addTodo) => {
-      window.location.href = "todo.html";
+    .then((newTodo) => {
+      window.location.href = "todos.html";
       // console.log(addTodo);
-      return addTodo;
+      return newTodo;
     });
 }
 
 //wire up
 loadUserArray();
 loadCategoriesArray();
-newTaskSumbitButton.onclick = addTodo;
+newTaskSumbitButton.onclick = addNewTodo;
