@@ -38,8 +38,6 @@ function loadCategoriesArray() {
     });
 }
 
-
 //wire up
 loadUserArray();
 loadCategoriesArray();
-
