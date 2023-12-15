@@ -44,7 +44,7 @@ function addTodo() {
   let prioritySelect = prioritySelect.value;
   let newTaskInput = newTaskInput.value;
   fetch("http://localhost:3000/users", {
-    method: "PUT",
+    method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(addTodo),
   })
