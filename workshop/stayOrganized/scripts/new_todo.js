@@ -38,20 +38,8 @@ function loadCategoriesArray() {
     });
 }
 
-//put priorites in drop down
-function loadPrioritiesArray() {
-  fetch("http://localhost:8083/api/todos")
-    .then((response) => response.json())
-    .then((todos) => {
-      for (const todo of todos) {
-        let option = document.createElement("option");
-        option.value = todo.id;
-        option.innerText = todo.priority;
-        prioritySelect.appendChild(option);
-      }
-    });
-}
+
 //wire up
 loadUserArray();
 loadCategoriesArray();
-loadPrioritiesArray();
+
