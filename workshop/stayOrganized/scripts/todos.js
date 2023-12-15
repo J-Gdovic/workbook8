@@ -8,21 +8,20 @@ function loadTodoArray() {
   fetch("http://localhost:8083/api/todos")
     .then((response) => response.json())
     .then((todos) => {
-        todoArray = todos;//assigns the fectch to the golbal var
+      todoArray = todos; //assigns the fectch to the golbal var
       for (const user of todoArray) {
         let option = document.createElement("option");
         option.value = user.id;
         option.innerText = user.userid;
         userIdSelect.appendChild(option);
       }
-      
     });
 }
 loadTodoArray();
 
 function buildTodoTable() {
   todoTbody.innerText = "";
-  const selectedUserId = userIdSelect.value
+  const selectedUserId = userIdSelect.value;
   for (const user of todoArray) {
     if (user.userid == selectedUserId) {
       const tr = todoTbody.insertRow(-1);
@@ -43,4 +42,3 @@ function buildTodoTable() {
 }
 
 userIdSelect.onclick = buildTodoTable;
-

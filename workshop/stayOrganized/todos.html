@@ -4,19 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todos</title>
-    <link rel="stylesheet" href="css/mystyles.css">
+    <link rel="stylesheet" href="css/mystyles.css" />
   </head>
   <body>
     <header>
       <nav>
         <a href="index.html">Home</a>
-        <a href="todos.html">Todo</a>
+        <a href="todos.html">Todos</a>
       </nav>
     </header>
     <main>
       <h1>Stay Organized!</h1>
-      <h3>In this app you will be able to view  todos by user id.</h3>
-     
+      <h3>On this page you will be able to view todos by user id.</h3>
+      <div>
+        <a href="new_todo.html">+Add Todo</a>
+      </div>
       <form>
         <label for="userIdSelect">Search By Userid:</label>
         <select id="userIdSelect">
@@ -25,10 +27,10 @@
       </form>
       <table>
         <thead>
-            <th>Category</th>
-            <th>Description</th>
-            <th>Deadline</th>
-            <th>Priority</th>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Deadline</th>
+          <th>Priority</th>
         </thead>
         <tbody id="todoTbody"></tbody>
       </table>
