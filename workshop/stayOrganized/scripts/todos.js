@@ -4,7 +4,7 @@ let userIdSelect = document.querySelector("#userIdSelect");
 let todoTbody = document.querySelector("#todoTbody");
 
 //Put userin drop down!, fetch userArray
-function loadTodoArray() {
+function loadUserArray() {
   fetch("http://localhost:8083/api/users")
     .then((response) => response.json())
     .then((users) => {
@@ -42,5 +42,5 @@ function buildTodoTable() {
       }
     });
 }
-loadTodoArray();
-userIdSelect.onclick = buildTodoTable;
+loadUserArray();
+userIdSelect.onchange = buildTodoTable;

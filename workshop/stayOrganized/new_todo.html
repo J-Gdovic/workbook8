@@ -1,24 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add New Todo</title>
-    <link rel="stylesheet" href="css/mystyles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/mystyles.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="todos.html">Todos</a>
-        </nav>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="todos.html">Todos</a>
+      </nav>
     </header>
     <main>
-        <h1>Stay Organized!</h1>
-        <h3>On this page you will be able to create a new task!</h3>
+      <h1>Stay Organized!</h1>
+      <h3>On this page you will be able to create a new task!</h3>
+      <form>
+        <div id="userDiv">
+          <label for="userIdSelect">Search By User:</label>
+          <select id="userIdSelect">
+            <option value="id">Select...</option>
+          </select>
+        </div>
+        <div id="categoryDiv">
+          <label for="categorySelect">Category:</label>
+          <select id="categorySelect">
+            <option value="id">Select...</option>
+          </select>
+        </div>
+        <div id="priorityDiv">
+          <label for="prioritySelect">Priority:</label>
+          <select id="prioritySelect">
+            <option value="id">Select...</option>
+          </select>
+        </div>
+        <div id="newTaskDiv">
+            <label>New Task:</label>
+            <input type="text" id="newTaskInput">
+        </div>
+        <div id="buttonDiv">
+<button id="newTaskSumbitButton">Submit</button>
+        </div>
+       
+      </form>
     </main>
-    <script src="scripts/new_todo.js">
-        
-    </script>
-</body>
+    <script src="scripts/new_todo.js"></script>
+  </body>
 </html>
