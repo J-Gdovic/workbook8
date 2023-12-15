@@ -51,7 +51,7 @@ function addNewTodo() {
     description: `${newTaskInput2}`,
   };
 
-  fetch("http://localhost:3000/todos", {
+  fetch("http://localhost:8083/api/todos", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(newTodo),
