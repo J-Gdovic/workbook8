@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 1</title>
     <nav>
-        <a href="page1.html">P1</a>
-        <a href="page2.html">P2</a>
+      <a href="page1.html">P1</a>
+      <a href="page2.html">P2</a>
+      <button id="clearButton">Clear</button>
     </nav>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Page 1</h1>
     <script>
-        localStorage.setItem("page1","message from page 1.")
+      const clearButton = document.querySelector("#clearButton");
+
+      localStorage.setItem("page1", "message from page 1.");
+
+      function clearStorage() {
+        localStorage.removeItem("page1"); //clears 1 item
+        localStorage.clear(); //removes all items
+      }
+      clearButton.onclick = clearStorage;
     </script>
-</body>
+  </body>
 </html>
